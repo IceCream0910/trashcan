@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+
+
+</head>
+
+<body>
+    <div class="map_wrap">
+
+        <div class="mylocBtn" onclick="moveMyLoc();">
+            <ion-icon style="font-size:20px;color:#0cb668" name="locate-outline"></ion-icon>
+        </div>
+
+        <div class="addMarkerBtn" onclick="location.href='post.html?lat='+map.getCenter().Ma+'&lon='+map.getCenter().La">
+            <ion-icon style="font-size:20px;color:#0cb668" name="add-outline"></ion-icon>
+        </div>
+
+        <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+
+
+        <div class="mainwindow">
+            <!-- mainwindow 시작-->
+            <h3>안녕하세요,<br></h3>
+            <span style="color:#5a5a5a;">내 주변 <span style="color:#0cb668;">쓰레기통</span>을 찾아보세요!</span>
+
+            <!-- item 시작-->
+            <div id="item">
+                <hr>
+                <div class="info_container">
+                    <h3 style="font-size: 20px;margin-bottom: 10px;">근거리1</h3>
+                    <div class="tags_container">
+                        <span class="tag">태그</span>
+                        <span class="tag">태그</span>
+                    </div>
+                </div>
+                <div class="distances_container">
+                    <span id="distance">000m</span>
+                </div>
+            </div>
+            <!-- item 끝-->
+
+
+
+        </div>
+        <!-- mainwindow 끝-->
+
+
+        <div class="infowindow">
+            <div class="info_container">
+                <h3 id="title">-</h3>
+                <div class="tags_container">
+                </div>
+            </div>
+            <div class="distances_container">
+                <span id="distance">000m</span>
+
+            </div>
+        </div>
+</body>
+
+<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=1b714b78c23c27a7af94724f1e9ecdc7"></script>
+<script type="text/javascript" src="script.js"></script>
+
+</html>

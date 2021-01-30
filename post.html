@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+
+
+</head>
+
+<body>
+    <div id="map" style="width:100%;height:50%;position:relative;overflow:hidden;"></div>
+    <div class="mylocBtn" onclick="markerOnGeo();">
+        <ion-icon style="font-size:20px;color:#0cb668" name="locate-outline"></ion-icon>
+    </div>
+
+    <input id="name" type="text" placeholder="이름"></input>
+    <input id="tag" type="text" placeholder="태그"></input>
+    <input id="latlon" type="text" placeholder="좌표"></input>
+
+    <button onclick="javascript:writeNewPost();">post</button>
+
+</body>
+<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=1b714b78c23c27a7af94724f1e9ecdc7"></script>
+<script type="text/javascript" src="post.js"></script>
+
+</html>
