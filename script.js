@@ -1,5 +1,6 @@
 var map;
 
+
 navigator.geolocation.getCurrentPosition(function(pos) {
     var latitude = pos.coords.latitude;
     var longitude = pos.coords.longitude;
@@ -48,6 +49,8 @@ trashcansRef.on('child_added', function(snapshot) {
     addMarker();
 });
 //////////////////////
+
+
 
 function addMarker() {
     // 마커를 표시할 위치와 title 객체 배열입니다 

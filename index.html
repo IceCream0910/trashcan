@@ -10,11 +10,12 @@
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
-
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
     <div class="map_wrap">
 
         <div class="mylocBtn" onclick="moveMyLoc();">
@@ -44,7 +45,7 @@
                     </div>
                 </div>
                 <div class="distances_container">
-                    <span id="distance">000m</span>
+
                 </div>
             </div>
             <!-- item 끝-->
@@ -62,8 +63,9 @@
                 </div>
             </div>
             <div class="distances_container">
-                <span id="distance">000m</span>
-
+                <a style="width:25px; height:25px; border:1.5px solid #ff6d6d; border-radius:50%; display:flex; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; color:#ff6d6d;">
+                    <ion-icon name="alert-outline"></ion-icon>
+                </a>
             </div>
         </div>
 </body>

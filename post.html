@@ -15,16 +15,44 @@
 </head>
 
 <body>
-    <div id="map" style="width:100%;height:50%;position:relative;overflow:hidden;"></div>
+    <div id="mapwrap">
+        <div id="map" style="width:100%;height:50%;position:fixed;top:0;overflow:hidden;border-radius:0 0 20px 20px;"></div>
+        <img style="width:40px;position: absolute;left:45vw;top:24%;z-index:9999999999999;" src="https://cdn.onlinewebfonts.com/svg/img_463767.png"></img>
+    </div>
+
     <div class="mylocBtn" onclick="markerOnGeo();">
         <ion-icon style="font-size:20px;color:#0cb668" name="locate-outline"></ion-icon>
     </div>
 
-    <input id="name" type="text" placeholder="이름"></input>
-    <input id="tag" type="text" placeholder="태그"></input>
-    <input id="latlon" type="text" placeholder="좌표"></input>
+    <!-- S12 get in touch -->
+    <div class="s12 module" style="position:fixed;top:50%;overflow-y:scroll;">
+        <div class="form-container">
+            <div class="group">
+                <input id="name" style="margin-top:20px;" type="text" required autocomplete="off">
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>이름 </label>
+            </div>
 
-    <button onclick="javascript:writeNewPost();">post</button>
+            <div class="group">
+                <input id="tag" type="text" required autocomplete="off">
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>태그</label>
+            </div>
+
+            <div class="group">
+                <input id="latlon" type="text" required autocomplete="off" disabled>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label style="top:-15px;">좌표</label>
+            </div>
+
+        </div>
+
+        <button style="position:fixed;bottom:0;left:0;width:100%;" onclick="javascript:writeNewPost();" class="pure-material-button-contained">완료</button>
+
+    </div>
 
 </body>
 <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=1b714b78c23c27a7af94724f1e9ecdc7"></script>
